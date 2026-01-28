@@ -46,6 +46,15 @@ public class ObjectTester {
         System.out.println("d3 age via getter = " + d3.getAge());
         System.out.println("d3 now = " + d3);
 
+        //making a default horse object
+        Horse horse1 = new Horse();
+        //Making a horse object with given data
+        Horse horse2 = new Horse("Nancy", true, "Palomino");
+        System.out.println("horse object 1" + horse1);
+        System.out.println("horse object 2" + horse2);
+
+
+
     }//end main
 
 }//end class
