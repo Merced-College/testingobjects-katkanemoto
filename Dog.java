@@ -1,56 +1,56 @@
 //Kanemoto
-//9/9/25
+//1/26/26
 //Dog class for my Dog objects
 
 public class Dog {
 
-    //data variables, they describe our Dog objects in the computer
+    //data variables
     private String name;
     private int age;
     private String breed;
 
-    //default constructor
-    public Dog () {
-        this.name = "Hank";
-        this.age = 1;
-        this.breed = "Lab";
+    //constructors
+    public Dog() {            // default constructor
+        name = "Unknown";
+        age = 0;
+        breed = "Mixed";
     }
 
-    //non-default constructor
-    public Dog (String name, int age, String breed) {
+    public Dog(String name, int age, String breed) { // parameterized constructor
         this.name = name;
         this.age = age;
         this.breed = breed;
     }
 
-    //setters - accessors
-    public void setName(String name) {
-        this.name = name;
+    public String getName() { 
+        return name; 
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setName(String name) { 
+        this.name = name; 
     }
 
-    public void setBreed(String breed) {
-        this.breed = breed;
+    public int getAge() { 
+        return age; 
     }
 
-    //getters - mutators
-    public String getName() {
-        return name;
+    public void setAge(int age) { 
+        // simple guard (optional)
+        if (age >= 0) 
+            this.age = age; 
     }
 
-    public int getAge() {
-        return age;
+    public String getBreed() { 
+        return breed; 
     }
 
-    public String getBreed() {
-        return breed;
+    public void setBreed(String breed) { 
+        this.breed = breed; 
     }
 
+    @Override
     public String toString() {
-        return name + ", " + age + ", " + breed;
+        return "Dog{name='" + name + "', age=" + age + ", breed='" + breed + "'}";
     }
 
 }//end Dog class
